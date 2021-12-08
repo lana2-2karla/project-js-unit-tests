@@ -12,8 +12,21 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  addEventListener
-};
-
+const average = (arrNum) => {
+  if (arrNum.length === 0) {
+    return undefined;
+  }
+  let contador = 0;
+  for (let i = 0; i < arrNum.length; i += 1) {
+    if (typeof arrNum[i] !== 'number') {
+     return undefined;
+    } 
+     contador += arrNum[i]; 
+    }
+    let result = contador / arrNum.length;
+  /* Refêrencia Math.round- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
+   return Math.round(result);
+  };
+  console.log(average([]));
+  
 module.exports = average;
