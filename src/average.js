@@ -27,6 +27,6 @@ const average = (arrNum) => {
   /* Refêrencia Math.round- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
    return Math.round(result);
   };
-  console.log(average([]));
+  //console.log(average([]));
   
 module.exports = average;
