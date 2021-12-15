@@ -24,8 +24,7 @@ const circle = require('../src/circle');
 */
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
-  it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    fail('Teste vazio!');  
+  it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {  
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 propriedades.
@@ -33,35 +32,37 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+  });
 
   it('circle retorna undefined, caso o parâmetro passado não seja um número', () => {
-      expect(circle('')).toBeUndefined();
+    expect(circle('')).toBeUndefined();
   });
 
   it('Testa se circle retorna um objeto', () => {
-    expect(circle(7)).toBe('object');
+    expect(typeof circle(7)).toBe('object');
   });
 
   it('Testa se o objeto retornado tem 3 propriedades', () => {
-  expect(object.keys(circle(7)).length).toBe(3);
+    expect(Object.keys(circle(7)).length).toBe(3);
   });
 
   it('Função, quando não recebe nenhum parâmetro, retorna undefined', () => {
-  expect(circle()).toBeUndefined();
+    expect(circle()).toBeUndefined();
  });
 
   it('Função retorna circunferência correta ao receber raio 2 ', () => {
-  expect(circle(2).circumference).toBeCloseTo(12.56);
+    expect(circle(2).circumference).toBeCloseTo(12.56);
   });
 
   it('Função retorna área correta ao receber raio 3', () => {
-  expect(circle(3).area).toBeCloseTo(28.26);
+    expect(circle(3).area).toBeCloseTo(28.26);
   });
 
   it('Função retorna todos os dados corretos ao receber raio 3', () => {
-  expect(circle(3).radius).toBeCloseTo(3)
-  expect(circle(3).area).toBeCloseTo(28.26);
-  expect(circle(3).circumference).toBeCloseTo(18.84);
+    expect(circle(3).radius).toBeCloseTo(3)
+    expect(circle(3).area).toBeCloseTo(28.26);
+    expect(circle(3).circumference).toBeCloseTo(18.84);
   });
 
-});
+ });
+
