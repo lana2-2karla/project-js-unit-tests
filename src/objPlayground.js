@@ -33,8 +33,23 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
-
-const arrayGenerator = (type, object) => {};
-
+const calculator = (number1, number2) => {
+  // Math.round src:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+  // Math.floor(arredonda para baixo) scr:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+  let mathOperations = {
+    sum: Math.round(number1 + number2),
+    mult: Math.round(number1 * number2),
+    div: Math.floor(number1 / number2),
+    sub: Math.round(number1 - number2),
+  };
+  return mathOperations;
+};
+// console.log(calculator(7.44, 3.77));
+const arrayGenerator = (type, object) => {
+  // Object.Keys() src:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+  if (type === 'keys') return Object.keys(object);
+  if (type === 'values') return Object.values(object);
+  if (type === 'entries') return Object.entries(object);
+};
+// console.log(arrayGenerator('keys', { sum: 11, mult: 28, div: 1, sub: 4 }));
 module.exports = { calculator, arrayGenerator };
